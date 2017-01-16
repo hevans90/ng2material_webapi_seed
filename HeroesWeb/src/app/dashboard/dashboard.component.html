@@ -1,0 +1,8 @@
+<md-card>
+  <h3>Top 3 Heroes</h3>
+  <md-list class="app-list">
+    <md-list-item class="app-item" *ngFor="let hero of heroes" [routerLink]="['/detail', hero.Id]" [class.selected]="hero === selectedHero">
+      <h3 md-line>{{hero.Id}} - {{hero.Name}}</h3>
+    </md-list-item>
+  </md-list>
+</md-card>       

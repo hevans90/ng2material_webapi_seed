@@ -1,0 +1,13 @@
+<md-card class="app-input-section" *ngIf="hero">
+  <h3>{{hero.Name}} details!</h3>
+  <div class="hero-container">
+    <div class='heroDiv'>
+      <div class='heroLine'>
+        <md-input [(ngModel)]="hero.Name" placeholder="Hero Name">
+          <span md-prefix>#{{hero.Id}}&nbsp;&nbsp;</span>
+        </md-input>
+      </div>
+    </div>
+  </div>
+  <button md-raised-button (click)="goBack()">Back</button>
+</md-card>

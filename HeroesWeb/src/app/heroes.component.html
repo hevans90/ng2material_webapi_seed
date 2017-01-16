@@ -1,0 +1,33 @@
+<md-card *ngIf="heroes">
+  <h3>Hero Listing</h3>
+  <md-list class="app-list">
+    <md-list-item class="app-item" *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
+      <h3 md-line>{{hero.Id}} - {{hero.Name}}</h3>
+    </md-list-item>
+  </md-list>
+
+  <div *ngIf="selectedHero">
+    <h2>
+      {{selectedHero.Name | uppercase}} is my hero
+    </h2>
+    <button md-raised-button (click)="gotoDetail()">View Details</button>
+  </div>
+</md-card>
+
+<!-- hero detail goes here -->
+<!--<my-hero-detail [hero]="selectedHero"></my-hero-detail>-->
+
+<!--<md-card *ngIf="heroes">
+  <h3>Hero Editor</h3>
+  <div class='hero-container'>
+    <div *ngFor="let hero of heroes">
+      <div class='heroDiv'>
+        <div class='heroLine'>
+          <md-input [(ngModel)]="hero.Name" placeholder="Hero Name">
+            <span md-prefix>#{{hero.Id}}&nbsp;&nbsp;</span>
+          </md-input>
+        </div>
+      </div>
+    </div>
+  </div>
+</md-card>-->
