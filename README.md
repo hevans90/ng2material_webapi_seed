@@ -1,5 +1,5 @@
 # ng2material_webapi_seed
-The angular 2 'Tour of Heroes' start project re-written in ng2 material, and with a light .NET Web API attached
+The angular 2 'Tour of Heroes' start project re-written in [ng2 material](https://github.com/angular/material2), and with a light .NET Web API attached
 
 ##The Web API
 The `.sln` file in the repo will open the C# project in Visual Studio. Build this using the default build config and run it to host the API locally
